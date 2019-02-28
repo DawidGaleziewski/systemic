@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700');
+
+* {
+	box-sizing: border-box;
+
+}
+
+h1, h2, ul, ol, li, p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	grid-template-rows: 5rem auto 5rem;
+	font-family: 'Playfair Display', serif;
+}
+
+/*navigation*/
+	/*create flex item with two flex items inside navigation*/
+.header__nav-account {
+	padding: 1rem;
+	background-color: #ba2e1f;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.header__nav-account-panel {
+	display: flex;
+	list-style: none;
+	font-family: serif;
+}
+
+.header__nav-account-panel > li {
+		padding: 0 0.5rem;
+		border-right: 1px solid white;
+		text-transform: capitalize;
+}
+
+.header__nav-account-panel > li:last-of-type {
+	border: none;
+}
+
+.header__nav-account_input {
+	border-radius: 10px;
+}
+
+.header__brand{
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 1.5rem;
+}
+
+.header__brand__logo > h1 {
+	font-size: 3rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.header__brand__logo > h1::first-letter {
+	font-size: 3.5rem;
+}
+
+.header__brand__media {
+	list-style: none;
+	display: flex;
+}
+
+.header__brand__logo > h2 {
+	font-weight: 400;
+	font-size: 1rem;
+
+}
+
+.header__brand__media > li {
+	margin: 0.5rem;
+}
+
+.header__nav-page_list {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+
+.header__nav-page_list > li {
+	margin: 1rem;
+}
+
+/*main*/
+	/*article*/
+.main__article {
+	display: flex;
+	margin: 0 2rem;
+}
+
+.main__article_image {
+	width: 400px;
+	height: 440px;
+}
+
+.main__article_text {
+	margin-top: 6rem;
+	margin-left: 4rem;
+	margin-bottom: 4rem;
+
+}
+
+.main__article_text > h1 {
+
+	text-transform: uppercase;
+	font-size: 5rem;
+	font-weight: 400;
+
+}
+
+.main__article_text > p {
+	margin-top: 0rem;
+}
+
+	/*services*/
+
+.main__services {
+	color: #878787;
+	display: flex;
+
+	background-color: #f2f2f2;
+	padding: 4rem 2rem;
+}
+
+.main__service {
+  margin-right: 4rem;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.main__service:last-of-type {
+	margin-right: 0;
+}
+
+.main__service > h1 {
+	font-size: 2rem;
+	font-weight: 400;
+	margin-bottom: 4rem;
+}
+
+.main__service > h1::first-letter {
+	text-transform: uppercase;
+}
+
+.main__services__about-us_img {
+	height: 140px;
+	width: 290px;
+	padding: 4px;
+	border: 1px solid black;
+}
+
+.main__services__about-us {
+	max-width: 300px;
+}
+
+.main__services__examples_img {
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	margin-right: 1rem;
+}
+
+.main__services__example {
+	margin-top: 2rem;
+	display: flex;
+}
+
+.main__services__example__text > h2 {
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+.main__services__example__text > h2:first-letter {
+	text-transform: uppercase;
+}
+
+.main__services__customer {
+	margin-bottom: 2rem;
+}
+
+	/*media*/
+.main__media {
+	display: flex;
+	margin: 2.5rem 2rem;
+	color: #666666;
+}
+
+.main__media_column {
+	border-top: 1px solid black;
+	margin-right: 4rem;
+
+	/*property that forces flex-items to be same size*/
+	flex: 1 1 0;
+
+	/*shorthand for:*/
+/*	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;*/
+
+}
+
+.main__media_column > h1 {
+	margin: 2rem 0;
+	text-transform: uppercase;
+}
+.main__media__quick-links{
+	
+}
+
+.main__media__quick-links_ul > li {
+	border-bottom: 1px dotted black;
+	padding: 0.5rem;
+}
+
+.main__media__blog-post {
+	margin-top: 2rem;
+}
+
+.main__media__blog-post_h1 {
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+.main__media__blog-post_date {
+	font-size: 0.8rem;
+}
+
+.main__media__blog-post_text {
+	margin: 2rem 0;
+}
+
+/*.main__media__contact {
+
+}*/
+
+.main__media__contact_form {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__media__contact_form > input,
+.main__media__contact_form > textarea
+ {
+ 	/*display: block;*/
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+	border: 0.5px solid #e3e3e3;
+	height: 2rem;
+	color: #666666;
+
+
+	/*Those inputs streatche one flex-item causing it to be bigger than rest*/
+	/*research more on this*/
+	/*max-width: 20vw;*/
+
+	/*Input auto wont work however width: 100% fixes issue
+	This forces inputs to adjust to its parrent*/
+	width: 100%;
+}
+
+.main__media__contact_form > textarea {
+	height: 5rem;
+}
+
+.main__media__contact_form_button {
+	background-color: #f2f2f2;
+	display: block;
+	width: 5rem;
+	padding: 0.5rem;
+	border: 0.5px solid #e3e3e3;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: #ba2e1f;
+}
+
+/*global elements*/
+.read-more_anchor {
+		display: block;
+		text-align: right;
+}
+
+.read-more_anchor > a {
+	text-align: left;
+	color: #ba2e1f;
+	text-decoration: none;
+}
+
+.main__article_text > .read-more_anchor > a {
+	text-transform: uppercase;
+}
+
+footer {
+	background-color: #f2f2f2;
+}
+
+.footer_list {
+	display: flex;
+	color: #919191;
+	justify-content: space-between;
+	list-style: none;
+	padding: 2rem;
+}
