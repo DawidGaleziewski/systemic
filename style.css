@@ -5,6 +5,8 @@
 
 }
 
+
+
 h1, h2, ul, ol, li, p {
 	margin: 0;
 	padding: 0;
@@ -30,13 +32,12 @@ body {
 .header__nav-account-panel {
 	display: flex;
 	list-style: none;
-	font-family: serif;
 }
 
 .header__nav-account-panel > li {
-		padding: 0 0.5rem;
-		border-right: 1px solid white;
-		text-transform: capitalize;
+	padding: 0 0.5rem;
+	border-right: 1px solid white;
+	text-transform: capitalize;
 }
 
 .header__nav-account-panel > li:first-of-type{
@@ -83,7 +84,16 @@ body {
 	padding: 0.5rem;
 }
 
-.header__brand__media_li > img {
+.header__brand__media_li > a {
+	text-decoration: none;
+
+}
+
+.header__brand__media_li > a:visited {
+	color: white;
+}
+
+.header__brand__media_li img {
 	width: 100%;
 }
 
@@ -145,8 +155,7 @@ body {
 
 }
 
-/*main*/
-	/*article*/
+/*main article*/
 .main__article {
 	display: flex;
 	margin: 0 2rem;
@@ -158,25 +167,21 @@ body {
 }
 
 .main__article_text {
-	margin-top: 6rem;
-	margin-left: 4rem;
-	margin-bottom: 4rem;
+	margin: 6rem 0 4rem 4rem;
 
 }
 
-.main__article_text > h1 {
-
+.main__article_text > h2 {
 	text-transform: uppercase;
 	font-size: 5rem;
 	font-weight: 400;
-
 }
 
 .main__article_text > p {
 	margin-top: 0rem;
 }
 
-	/*services*/
+/*services*/
 
 .main__services {
 	color: #878787;
@@ -188,20 +193,24 @@ body {
 
 .main__service {
   margin-right: 4rem;
-
-  flex-grow: 1;
+/*  flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0;
+  flex-basis: 0;*/
+  flex: 1 1 0;
 }
 
 .main__service:last-of-type {
 	margin-right: 0;
 }
 
-.main__service > h1 {
+.main__service > h2 {
 	font-size: 2rem;
 	font-weight: 400;
 	margin-bottom: 4rem;
+}
+
+.main__service > h2::first-letter {
+	text-transform: uppercase;
 }
 
 .main__service > h1::first-letter {
@@ -265,13 +274,13 @@ body {
 
 }
 
-.main__media_column > h1 {
+.main__media_column > h2 {
 	margin: 2rem 0;
 	text-transform: uppercase;
 }
-.main__media__quick-links{
+/*.main__media__quick-links{
 	
-}
+}*/
 
 .main__media__quick-links_ul > li {
 	border-bottom: 1px dotted black;
@@ -289,7 +298,7 @@ body {
 	margin-top: 2rem;
 }
 
-.main__media__blog-post_h1 {
+.main__media__blog-post_h3 {
 	font-size: 1.5rem;
 	font-weight: normal;
 }
@@ -316,21 +325,15 @@ body {
 
 .main__media__contact_form > input,
 .main__media__contact_form > textarea {
+	height: 2rem;
+	padding: 1rem;
 	margin-bottom: 1rem;
 	border-radius: 5px;
-	background-color: #f2f2f2;
 	border: 0.5px solid #e3e3e3;
-	height: 2rem;
+	background-color: #f2f2f2;
 	color: #666666;
 
-	padding: 1rem;
-
-
-	/*Those inputs streatche one flex-item causing it to be bigger than rest*/
-	/*research more on this*/
-	/*max-width: 20vw;*/
-
-	/*Input auto wont work however width: 100% fixes issue
+	/*Input auto wont work (streatches flex-item) however width: 100% fixes issue
 	This forces inputs to adjust to its parrent*/
 	width: 100%;
 }

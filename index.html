@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<!-- Forgot to add lang property to html tag -->
+<html lang="zxx">
 <head>
+	<meta charset="utf-8">
 	<title>systemic</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +26,7 @@
 					archived news
 				</li>
 			</ul>
-			<input class="header__nav-account_input" type="search" name="">
+			<input class="header__nav-account_input" type="search" name="search">
 		</nav>
 
 		<div class = "header__brand">
@@ -36,26 +38,43 @@
 					free PSD website template
 				</h2>			
 			</div>
+
+			<!-- a tags should be in li, a cannot be direct child of ul -->
 			<ul class="header__brand__media">
-				<li class="header__brand__media_li header__brand__media_li--linkedin">
-					<!-- linkedin -->
-					<p class="header__brand__media_li_logo">in</p>
-				</li>
-				<li class="header__brand__media_li">
-					<!-- twitter -->
-					<img src="./media/twitter.png">
-				</li>
-				<li class="header__brand__media_li">
-					<img src="./media/pintrest.png">
-				</li>
-				<li class="header__brand__media_li">
-					<p class="header__brand__media_li--google-plus">
-						g+
-					</p>
-				</li>
-				<li class="header__brand__media_li header__brand__media_li--spotify">
-					<img src="./media/spotify.png">
-				</li>
+				
+					<li class="header__brand__media_li header__brand__media_li--linkedin">
+						<a href="https://www.google.com">
+							<p class="header__brand__media_li_logo">in</p>
+						</a>
+					</li>	
+				
+					<li class="header__brand__media_li">
+						<a href="https://www.google.com">
+							<img src="./media/twitter.png" alt="twitter">
+						</a>
+					</li>				
+				
+					<li class="header__brand__media_li">
+						<a href="https://www.google.com">
+							<img src="./media/pintrest.png" alt="pintrest">
+						</a>
+					</li>	
+				
+					<li class="header__brand__media_li">
+						<a href="https://www.google.pl">
+							<p class="header__brand__media_li--google-plus">
+								g+
+							</p>
+						</a>
+					</li>					
+				
+					<li class="header__brand__media_li header__brand__media_li--spotify">
+						<a href="https://www.google.com">
+							<img src="./media/spotify.png" alt="spotify">
+						</a>
+					</li>					
+				
+
 			</ul>
 		</div>
 
@@ -91,10 +110,10 @@
 
 	<main>
 		<section class="main__article">
-			<img class ="main__article_image" src="./media/placeholder.jpg">
+			<img class ="main__article_image" src="./media/placeholder.jpg" alt="main article picture">
 
 			<div class="main__article_text">
-				<h1>a huge title here</h1>
+				<h2>a huge title here</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
@@ -108,8 +127,8 @@
 
 		<section class = "main__services">
 			<div class= "main__service main__services__about-us">
-				<h1>A little about us</h1>
-				<img src="./media/placeholder_landscape.jpg" class="main__services__about-us_img">
+				<h2>A little about us</h2>
+				<img src="./media/placeholder_landscape.jpg" class="main__services__about-us_img" alt="service picture">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -119,10 +138,10 @@
 			</div>
 
 			<div class="main__service main__services__examples">
-				<h1>some of our services</h1>
+				<h2>some of our services</h2>
 
 				<div class="main__service main__services__example">
-					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img">
+					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img" alt="service picture">
 					<div class="main__services__example__text">
 						<h2>service name</h2>
 						<p>Lorem ipsum dolor sit amet.</p>
@@ -130,7 +149,7 @@
 				</div>
 
 				<div class="main__service main__services__example">
-					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img">
+					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img" alt="service picture">
 					<div class="main__services__example__text">
 						<h2>service name</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -138,7 +157,7 @@
 				</div>
 
 				<div class="main__service main__services__example">
-					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img">
+					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img" alt="service picture">
 					<div class="main__services__example__text">
 						<h2>service name</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -146,7 +165,7 @@
 				</div>
 
 				<div class="main__service main__services__example">
-					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img">
+					<img src="./media/placeholder_landscape_2.jpg" class="main__services__examples_img" alt="service picture">
 					<div class="main__services__example__text">
 						<h2>service name</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -156,16 +175,16 @@
 			</div>
 
 			<div class="main__service main__services__customers">
-				<h1>what our clients say</h1>
+				<h2>what our clients say</h2>
 
 				<div class= "main__services__customer">
-					<h1 class="main__services__customer_h1">tommy tanker <span>- ceo</span></h1>
+					<h2 class="main__services__customer_h2">tommy tanker <span>- ceo</span></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 					<span class = "read-more_anchor"><a href="#">view this project</a></span>
 				</div>
 				<div>
-					<h1 class="main__services__customer_h1">tommy tanker - ceo</h1>
+					<h2 class="main__services__customer_h2">tommy tanker - ceo</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 					<span class = "read-more_anchor"><a href="#">view this project</a></span>
@@ -175,7 +194,7 @@
 
 		<section class = "main__media">
 			<div class = "main__media_column main__media__tweets">
-				<h1>latest tweets</h1>
+				<h2>latest tweets</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut </p>
@@ -186,7 +205,7 @@
 			</div>
 
 			<div class="main__media_column main__media__quick-links">
-				<h1>quick links</h1>
+				<h2>quick links</h2>
 				<ul class= "main__media__quick-links_ul">
 					<li>
 						st laborum
@@ -207,10 +226,10 @@
 			</div>
 
 			<div class="main__media_column main__media__blog-posts">
-				<h1>latest blog posts</h1>
+				<h2>latest blog posts</h2>
 
 				<div class="main__media__blog-post">
-					<h1 class="main__media__blog-post_h1">post title</h1>
+					<h3 class="main__media__blog-post_h3">post title</h3>
 					<p class="main__media__blog-post_date">Admin, domain.com Friday, 6th April 200</p>
 
 					<p class="main__media__blog-post_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -220,7 +239,7 @@
 				</div>
 
 				<div class="main__media__blog-post">
-					<h1 class="main__media__blog-post_h1">post title</h1>
+					<h3 class="main__media__blog-post_h3">post title</h3>
 					<p class="main__media__blog-post_date">Admin, domain.com Friday, 6th April 200</p>
 
 					<p class="main__media__blog-post_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -232,12 +251,13 @@
 
 			</div>
 
+			<!-- name should never be empty -->
 			<div class="main__media_column main__media__contact">
-				<h1>contact us</h1>
+				<h2>contact us</h2>
 				<form class="main__media__contact_form">
-					<input type="text" name="" placeholder="name">
-					<input type="email" name="" placeholder="email">
-					<input type="password" name="" placeholder="password">
+					<input type="text" name="text" placeholder="name">
+					<input type="email" name="email" placeholder="email">
+					<input type="password" name="password" placeholder="password">
 					<textarea rows="4" cols="50">
 						message
 					</textarea>
