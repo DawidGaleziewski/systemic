@@ -19,7 +19,7 @@ body {
 /*navigation*/
 	/*create flex item with two flex items inside navigation*/
 .header__nav-account {
-	padding: 1rem;
+	padding: 1rem 2rem;
 	background-color: #ba2e1f;
 	color: white;
 	display: flex;
@@ -39,12 +39,17 @@ body {
 		text-transform: capitalize;
 }
 
+.header__nav-account-panel > li:first-of-type{
+	padding-left: 0;
+}
+
 .header__nav-account-panel > li:last-of-type {
 	border: none;
 }
 
 .header__nav-account_input {
 	border-radius: 10px;
+	border: none;
 }
 
 .header__brand{
@@ -66,7 +71,50 @@ body {
 .header__brand__media {
 	list-style: none;
 	display: flex;
+	align-items: flex-end;
 }
+
+.header__brand__media_li {
+	margin: 0.5rem;
+	background-color: #333333;
+	border-radius: 50px;
+	width: 3rem;
+	height: 3rem;
+	padding: 0.5rem;
+}
+
+.header__brand__media_li > img {
+	width: 100%;
+}
+
+.header__brand__media_li--linkedin {
+	color: white;
+	font-size: 2rem;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+
+}
+
+.header__brand__media_li--google-plus {
+	color: white;
+	font-size: 2rem;
+	line-height: 1.5rem;
+}
+
+.header__brand__media_li--spotify{
+	background-color: #ee802f;
+}
+
+
+
+.header__brand__media_li_logo {
+	position: absolute;
+	left: 20%;
+	top: 18%;
+}
+
 
 .header__brand__logo > h2 {
 	font-weight: 400;
@@ -74,20 +122,27 @@ body {
 
 }
 
-.header__brand__media > li {
-	margin: 0.5rem;
-}
 
 .header__nav-page_list {
 	list-style: none;
 	display: flex;
 	justify-content: center;
-	text-transform: uppercase;
+
 	margin-bottom: 2rem;
+
 }
 
 .header__nav-page_list > li {
 	margin: 1rem;
+	color:#e9e8e3;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.header__nav-page_list > li:hover {
+	color: #ba2e1f;
+	cursor: pointer;
+
 }
 
 /*main*/
@@ -250,6 +305,9 @@ body {
 /*.main__media__contact {
 
 }*/
+.main__media__contact {
+	margin-right: 2rem;
+}
 
 .main__media__contact_form {
 	display: flex;
@@ -260,11 +318,12 @@ body {
 .main__media__contact_form > textarea {
 	margin-bottom: 1rem;
 	border-radius: 5px;
-	border: none;
 	background-color: #f2f2f2;
 	border: 0.5px solid #e3e3e3;
 	height: 2rem;
 	color: #666666;
+
+	padding: 1rem;
 
 
 	/*Those inputs streatche one flex-item causing it to be bigger than rest*/
